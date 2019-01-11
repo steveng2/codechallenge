@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0:
+  }
+  :root {
+    --main-color: 111;
+    --main-color-roof: #999;
+  /*   --main-bg-color: 111; */
+    --main-color-snowman: #fff;
+  }
+  body {
+    background-color: #86C8E9;
+  }
+  .wrapper {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+  }
+  
+  .roof {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: var(--main-color-roof);
+  
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  .house {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: var(--main-color-roof);
+  }
+  .snowman_wrapper {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+  }
+  .snowman_head {
+    position: absolute;
+    top: 90px;
+    left: 200px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--main-color-snowman);
+  }
+  
+  .snowman_body {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+    height: 160px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--main-color-snowman);
+    border-bottom-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+   
+  }
+  
+  .eye_left {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: 125px;
+    left: 225px;
+    border-radius: 50%;
+  }
+  .eye_right {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    top: 120px;
+    left: 255px;
+    border-radius: 50%;
+  }
+  
+  .mouth {
+    background-color: red;
+    height: 10px;
+    width: 75px;
+    position: relative;
+    top: 140px;
+    left: 210px;
+    border-radius: 50%;
+  }
+  
+  .nose {
+    background-color: orange;
+    height: 10px;
+    width: 15px;
+    position: relative;
+    top: 90px;
+    left: 230px;
+  
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);}
+  .hat {
+    background-color: white;
+    height: 90px;
+    width: 75px;
+    position: absolute;
+    top: 10px;
+    left: 210px;
+    border-top-right-radius: 30%;
+    border-top-left-radius: 30%;
+  }
+  .hat_band {
+    background-color: yellow;
+    height: 19px;
+    width: 111px;
+    position: relative;
+    top: 60px;
+    left: 190px;
+    border-top-right-radius: 90%;
+    border-top-left-radius: 90%;
+    border-top-style: solid;
+    border-top-color: green;
+  }
+  .hat_band:before {
+    background-color: brown;
+    height: 19px;
+    width: 111px;
+    position: relative;
+    top: 60px;
+    left: 10px;
+    border-top-right-radius: 90%;
+    border-top-left-radius: 90%;
+    border-top-style: solid;
+    border-top-color: green;
+  }
+  
+  .snow_ground {
+    position: absolute;
+    top: 390px;
+    left: 100px;
+    width: 100px;
+    height: 300px;
+    background-color: white;
+   
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground2 {
+    position: absolute;
+    top: 390px;
+    left: 150px;
+    width: 100px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  
+  .snow_ground3 {
+    position: absolute;
+    top: 370px;
+    left: 10px;
+    width: 100px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground4 {
+    position: absolute;
+    top: 370px;
+    left: 220px;
+    width: 100px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground5 {
+    position: absolute;
+    top: 345px;
+    left: 300px;
+    width: 150px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground6 {
+    position: absolute;
+    top: 395px;
+    left: 390px;
+    width: 150px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground7 {
+    position: absolute;
+    top: 370px;
+    left: 470px;
+    width: 150px;
+    height: 300px;
+    background-color: white;
+    
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground8 {
+    position: absolute;
+    top: 370px;
+    left: 570px;
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
+  .snow_ground9 {
+    position: absolute;
+    top: 390px;
+    left: 670px;
+    width: 450px;
+    height: 300px;
+    background-color: white;
+    
+    -webkit-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
+  }
