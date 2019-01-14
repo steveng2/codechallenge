@@ -2,36 +2,112 @@
   padding: 0;
   margin: 0:
 }
+
 :root {
   --main-color: 111;
   --main-color-roof: #999;
+  /*   --main-bg-color: 111; */
   --main-color-snowman: #fff;
-  
 }
+
 body {
   background-color: #86C8E9;
-
 }
+
 h1 {
   font-family: 'Indie Flower', cursive;
   position: absolute;
   top: 300px;
   left: 145px;
-  
-}
-.wrapper {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
 }
 
+h2 {
+  font-family: 'Indie Flower', cursive;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+< !--mask shadow that grows here-->.mask_shadow {
+  position: absolute;
+  top: 100px;
+  left: 390px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: rgba(192, 192, 192, 0.3);
+  animation-name: mask_shadow;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+< !-- animation for h2 tag -->.happy {
+  position: absolute;
+  topL 90px;
+  left: 40px;
+  z-index: 30;
+  color: rgba(0, 14, 12, 0.0);
+  animation: happy_display;
+  animation-delay: 4s;
+  animation-duration: 10s;
+}
+
+@keyframes happy_display {
+  0% {
+    visibility: hidden;
+  }
+
+  30% {
+    display: none;
+    color: rgba(255, 255, 255, 0.1);
+  }
+
+  36% {
+    display: none;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  66% {
+    display: none;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  100% {
+    display: none;
+    color: rgba(255, 225, 225, 1);
+  }
+}
+
+@keyframes mask_shadow {
+  from {
+    background-color: rgba(192, 192, 192, 0.3);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 100px;
+    left: 390px;
+  }
+
+  to {
+    background-color: black;
+    width: 3000px;
+    height: 3000px;
+    poistion: reative;
+    top: -400px;
+    left: -830px;
+  }
+}
 
 .snowman_wrapper {
   position: absolute;
   top: 10px;
   left: 300px;
 }
+
 .snowman_head {
   z-index: 1;
   position: absolute;
@@ -58,11 +134,12 @@ h1 {
   background-color: var(--main-color-snowman);
   border-bottom-right-radius: 30%;
   border-bottom-left-radius: 30%;
-  background-color: #CECECE; 
+  background-color: #CECECE;
   background: -moz-linear-gradient(left, #CECECE 0%, #E6E7EB 50%, #C5C5C5 100%);
   background: -webkit-linear-gradient(left, #CECECE 0%, #E6E7EB 50%, #C5C5C5 100%);
   background: linear-gradient(to right, #CECECE 0%, #E6E7EB 50%, #C5C5C5 100%);
 }
+
 .snowman_shadow {
   z-index: -2;
   position: absolute;
@@ -71,21 +148,20 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 40%;
-
   background: linear-gradient(to right, #CECECE 0%, #E6E7EB 50%, #C5C5C5 100%);
-
-  -webkit-box-shadow: 50px 50px 9px 5px #F7F7F7; 
-box-shadow: 5px 4px 244px 133px #F1F1F1;
+  -webkit-box-shadow: 50px 50px 9px 5px #F7F7F7;
+  box-shadow: 5px 4px 244px 133px #F1F1F1;
   -moz-transform: translate(13px, 9px) skew(-52deg, 7deg);
--webkit-transform: translate(13px, 9px) skew(-52deg, 7deg);
--o-transform: translate(13px, 9px) skew(-52deg, 7deg);
--ms-transform: translate(13px, 9px) skew(-52deg, 7deg);
-transform: translate(13px, 9px) skew(-52deg, 7deg);
+  -webkit-transform: translate(13px, 9px) skew(-52deg, 7deg);
+  -o-transform: translate(13px, 9px) skew(-52deg, 7deg);
+  -ms-transform: translate(13px, 9px) skew(-52deg, 7deg);
+  transform: translate(13px, 9px) skew(-52deg, 7deg);
   border-top-right-radius: 999px;
-  border-top-left-radius:  800px;
+  border-top-left-radius: 800px;
   border-bottom-right-radius: 650px;
-  border-bottom-left-radius:  550px;
+  border-bottom-left-radius: 550px;
 }
+
 .eye_left {
   z-index: 1;
   background-color: red;
@@ -95,9 +171,10 @@ transform: translate(13px, 9px) skew(-52deg, 7deg);
   top: 125px;
   left: 225px;
   border-radius: 50%;
-  -webkit-box-shadow: 18px 1px 21px -2px rgba(0,0,0,0.45); 
-box-shadow: 18px 1px 21px -2px rgba(0,0,0,0.45);
+  -webkit-box-shadow: 18px 1px 21px -2px rgba(0, 0, 0, 0.45);
+  box-shadow: 18px 1px 21px -2px rgba(0, 0, 0, 0.45);
 }
+
 .eye_right {
   z-index: 1;
   background-color: red;
@@ -129,16 +206,18 @@ box-shadow: 18px 1px 21px -2px rgba(0,0,0,0.45);
   top: 113px;
   left: 235px;
 
--webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
 .hat_wrapper {
-  width:  100%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 22px;
   left: 295px;
 }
+
 .hat {
   z-index: 2;
   background-color: white;
@@ -154,10 +233,11 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   background: -webkit-linear-gradient(left, #001ACE 0%, #E6E7EB 50%, #9E6AC5 100%);
   background: linear-gradient(to right, #001ACE 0%, #E6E7EB 50%, #9E6AC5 100%);
 }
+
 .hat_band {
   z-index: 5;
   position: absolute;
-  top:  83px;
+  top: 83px;
   left: 200px;
   background-color: green;
   height: 19px;
@@ -167,10 +247,10 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   border-top-style: solid;
   border-top-color: black;
   background: #C38ACE;
-  background: -moz-linear-gradient(left,   #C38ACE 0%, #D2C3E8 50%, #C38ACE  100%);
- background: -webkit-linear-  gradient(left, #C38ACE 0%, #D2C3E8 50%,  #C38ACE 100%);
- background: linear-gradient(to right,  #C38ACE 0%, #D2C3E8 50%, #C38ACE 100%);
-} 
+  background: -moz-linear-gradient(left, #C38ACE 0%, #D2C3E8 50%, #C38ACE 100%);
+  background: -webkit-linear- gradient(left, #C38ACE 0%, #D2C3E8 50%, #C38ACE 100%);
+  background: linear-gradient(to right, #C38ACE 0%, #D2C3E8 50%, #C38ACE 100%);
+}
 
 .eye_left {
   background-color: red;
@@ -181,6 +261,7 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   left: 225px;
   border-radius: 50%;
 }
+
 .eye_right {
   background-color: red;
   height: 10px;
@@ -203,49 +284,49 @@ clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 
 .snow_ground {
   position: absolute;
-  top: 300px;
+  top: 330px;
   left: 100px;
   width: 100px;
   height: 300px;
   background-color: white;
- 
+
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground2 {
   position: absolute;
-  top: 303px;
+  top: 280px;
   left: 150px;
   width: 100px;
   height: 300px;
   background-color: white;
-  
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
 
 .snow_ground3 {
   position: absolute;
-  top: 310px;
+  top: 280px;
   left: 10px;
   width: 100px;
   height: 300px;
   background-color: white;
-  
   -webkit-clip-path: circle(30.7% at 50% 100%);
   clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground4 {
   position: absolute;
-  top: 310px;
+  top: 289px;
   left: 220px;
   width: 100px;
   height: 300px;
   background-color: white;
-  
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground5 {
   position: absolute;
   top: 295px;
@@ -253,21 +334,22 @@ clip-path: circle(30.7% at 50% 100%);
   width: 150px;
   height: 300px;
   background-color: white;
-  
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground6 {
   position: absolute;
-  top: 335px;
-  left: 390px;
+  top: 260px;
+  left: 290px;
   width: 150px;
   height: 300px;
   background-color: white;
-  
+
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground7 {
   position: absolute;
   top: 320px;
@@ -276,47 +358,51 @@ clip-path: circle(30.7% at 50% 100%);
   height: 300px;
   background-color: white;
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground8 {
   position: absolute;
-  top: 290px;
+  top: 306px;
   left: 570px;
   width: 250px;
   height: 300px;
   background-color: white;
-  
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
+
 .snow_ground9 {
   position: absolute;
-  top: 290px;
+  top: 360px;
   left: 670px;
   width: 450px;
   height: 300px;
   background-color: white;
-  
+
   -webkit-clip-path: circle(30.7% at 50% 100%);
-clip-path: circle(30.7% at 50% 100%);
+  clip-path: circle(30.7% at 50% 100%);
 }
-.cloud_wrapper {
+
+< !-- cloud wrapper -->.cloud_wrapper {
   position: absolute;
   left: 10px;
   top: 122px;
 }
+
 .cloud_wrapper2 {
   position: absolute;
   left: 70px;
   top: 12px;
 }
+
 .cloud_wrapper3 {
   position: absolute;
   left: 190px;
   top: 122px;
 }
 
-.cloud_leave2  {
+.cloud_leave2 {
   height: 100px;
   width: 400px;
   background-color: red;
@@ -326,57 +412,62 @@ clip-path: circle(30.7% at 50% 100%);
   position: absolute;
   left: 100px;
   top: 100px;
- clip-path: ellipse(73% 40% at 26% 23%);
+  clip-path: ellipse(73% 40% at 26% 23%);
   background-color: white;
   clip-path: ellipse(26% 18% at 51% 41%);
   height: 100px;
   width: 100px;
 }
+
 .cloud_leave2 {
   position: absolute;
   left: 120px;
   top: 100px;
- clip-path: ellipse(73% 40% at 26% 23%);
+  clip-path: ellipse(73% 40% at 26% 23%);
   background-color: white;
   clip-path: ellipse(26% 18% at 51% 41%);
   height: 100px;
   width: 100px;
 }
+
 .cloud_leave3 {
   position: absolute;
   left: 140px;
   top: 90px;
- clip-path: ellipse(73% 40% at 26% 23%);
+  clip-path: ellipse(73% 40% at 26% 23%);
   background-color: white;
   clip-path: ellipse(26% 18% at 51% 41%);
   height: 100px;
   width: 100px;
 }
+
 .cloud_leave4 {
   position: absolute;
   left: 120px;
   top: 90px;
- clip-path: ellipse(73% 40% at 26% 23%);
+  clip-path: ellipse(73% 40% at 26% 23%);
   background-color: white;
   clip-path: ellipse(26% 18% at 51% 41%);
   height: 100px;
   width: 100px;
 }
+
 .cloud_leave5 {
   position: absolute;
   left: 120px;
   top: 110px;
- clip-path: ellipse(73% 40% at 26% 23%);
+  clip-path: ellipse(73% 40% at 26% 23%);
   background-color: white;
   clip-path: ellipse(26% 18% at 51% 41%);
   height: 100px;
   width: 100px;
 }
+
 .cloud_leave6 {
   position: absolute;
   left: 150px;
   top: 100px;
- clip-path: ellipse(73% 40% at 26% 23%);
+  clip-path: ellipse(73% 40% at 26% 23%);
   background-color: white;
   clip-path: ellipse(26% 18% at 51% 41%);
   height: 100px;
